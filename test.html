@@ -115,7 +115,7 @@
         /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(42, 42, 42, 0.85) 100%),
-                url('./img/Hero4.png') no-repeat center center/cover;
+                url('./img/1e970811e8696cb0754fde8068ec9eed.jpg') no-repeat center center/cover;
             background-attachment: fixed;
             position: relative;
             overflow: hidden;
@@ -681,10 +681,10 @@
             display: flex;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
+            background-color: #f5f5f5;
         }
 
         .service-card:nth-child(1) {
@@ -705,12 +705,11 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .service-image {
             width: 40%;
-            background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%);
+            /* background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%); */
             border: 20px;
             display: flex;
             align-items: center;
@@ -718,7 +717,7 @@
             color: white;
             font-size: 14px;
             text-align: center;
-            padding: 20px;
+            
         }
 
         .service-content {
@@ -1736,7 +1735,7 @@
         .why-choose-image {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%);
+            /* background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%); */
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -1745,7 +1744,7 @@
             font-size: 16px;
             text-align: center;
             padding: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); */
         }
 
         /* Scroll Animation Trigger */
@@ -2085,11 +2084,10 @@
             </div>
 
             <ul class="nav-menu" id="nav_Menu">
-                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">الرائيسية</a></li>
-                <li><a href="#">من نحن </a></li>
-                <li><a href="#">خدماتنا </a></li>
-                <li><a href="#">لماذا تختارنا </a></li>
+                <li><a href="#about">من نحن </a></li>
+                <li><a href="#Services">خدماتنا </a></li>
+                <li><a href="#why-choose-section">لماذا تختارنا </a></li>
                 <li><a href="#"> اتصال بنا </a></li>
             </ul>
 
@@ -2333,7 +2331,7 @@
                     style="position: relative; width: 100%; height: 500px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; animation: slideInRight 0.8s ease-out;">
                     <div style="text-align: center; color: rgba(255, 255, 255, 0.3);">
                         <i class="fas fa-image" style="font-size: 60px; margin-bottom: 20px; display: block;"></i>
-                        <img src="./img/Hero4.png" alt="">
+                        <img src="./img/076bc8ff9daa2f58cdefc609bf5203f8-Photoroom.png" alt="">
                     </div>
                 </div>
 
@@ -2343,17 +2341,18 @@
     </section>
 
     <!-- Who We Are Section -->
-    <section class="who-we-are-section">
+    <section class="who-we-are-section" id="about">
         <!-- Services Grid -->
         <div class="services-grid">
 
             <!-- تنظيف الخزانات -->
             <div class="service-card">
-                <div class="service-image">
-                    <div style="text-align: center; border-radius: 20px;" class="overflow-hidden rounded-xl">
-                        <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض"
+                <div class="service-image " class="mr-3">
+                    <div style="text-align: center; border-radius: 20px;" class="overflow-hidden rounded-xl" >
+                        <img src="./img/02715afc-d28f-4c19-9e54-34f48064dbf4.jfif" alt="تنظيف خزانات المياه بالرياض"
                             class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
                     </div>
+                    
                 </div>
 
                 <div class="service-content">
@@ -2378,7 +2377,7 @@
             <div class="service-card">
                 <div class="service-image">
                     <div style="text-align: center; border-radius: 20px;" class="overflow-hidden rounded-xl">
-                        <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض"
+                        <img src="./img/02715afc-d28f-4c19-9e54-34f48064dbf4.jfif" alt="تنظيف خزانات المياه بالرياض"
                             class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
                     </div>
                 </div>
@@ -2468,14 +2467,14 @@
     <div class="who-we-are-right">
         <div class="team-image">
             <div style="text-align: center;">
-                <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض"  class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
+                <img src="./img/Tشعار اتقان الخليج.png" alt="تنظيف خزانات المياه بالرياض"  class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
             </div>
         </div>
 
-        <div class="satisfaction-badge">
+        <!-- <div class="satisfaction-badge">
             <div class="satisfaction-number">100%</div>
             <div class="satisfaction-label">نسبة رضا العملاء</div>
-        </div>
+        </div> -->
 
         <a href="tel:0541178508" class="more-about-btn">
             تواصل معنا الآن
@@ -2577,7 +2576,7 @@
     </script>
 
     <!-- Services Section -->
-   <section class="services-section">
+   <section class="services-section" id="Services">
     <div class="services-container">
 
         <!-- Header -->
@@ -2611,7 +2610,7 @@
                     <div class="service-image">
                         <div style="text-align: center;">
                            
-                            <img src="./img/Hero4.png" alt="">
+                            <img src="./img/02715afc-d28f-4c19-9e54-34f48064dbf4.jfif" alt="">
                         </div>
                     </div>
                 </div>
@@ -2625,7 +2624,9 @@
                         </p>
                     </div>
                     <div class="service-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                        <a href="tel:0541178508">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2635,9 +2636,10 @@
                 <div class="service-image-wrapper">
                     <div class="service-image">
                         <div style="text-align: center;">
-                            <i class="fas fa-search-location"
-                                style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                            <p>كشف دقيق بدون تكسير</p>
+                              <div style="text-align: center;">
+                           
+                            <img src="./img/02715afc-d28f-4c19-9e54-34f48064dbf4.jfif" alt="">
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -2650,8 +2652,10 @@
                             تمنع الهدر وتحافظ على سلامة المبنى.
                         </p>
                     </div>
-                    <div class="service-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                   <div class="service-arrow">
+                        <a href="tel:0541178508">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2660,10 +2664,9 @@
             <div class="service-item scroll-animate">
                 <div class="service-image-wrapper">
                     <div class="service-image">
-                        <div style="text-align: center;">
-                            <i class="fas fa-filter"
-                                style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                            <p>تنقية وتحسين جودة المياه</p>
+                          <div style="text-align: center;">
+                           
+                            <img src="./img/02715afc-d28f-4c19-9e54-34f48064dbf4.jfif" alt="">
                         </div>
                     </div>
                 </div>
@@ -2676,8 +2679,10 @@
                             والحفاظ على مياه نظيفة وصحية للاستخدام اليومي.
                         </p>
                     </div>
-                    <div class="service-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                   <div class="service-arrow">
+                        <a href="tel:0541178508">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2686,10 +2691,9 @@
             <div class="service-item scroll-animate">
                 <div class="service-image-wrapper">
                     <div class="service-image">
-                        <div style="text-align: center;">
-                            <i class="fas fa-tools"
-                                style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                            <p>صيانة دورية شاملة</p>
+                           <div style="text-align: center;">
+                           
+                            <img src="./img/02715afc-d28f-4c19-9e54-34f48064dbf4.jfif" alt="">
                         </div>
                     </div>
                 </div>
@@ -2702,8 +2706,10 @@
                             لضمان تشغيل آمن ومستمر دون أعطال مفاجئة.
                         </p>
                     </div>
-                    <div class="service-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                   <div class="service-arrow">
+                        <a href="tel:0541178508">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2815,8 +2821,8 @@
 
         <div class="trusted-image">
             <div class="trusted-image-placeholder">
-                <div style="text-align: center;">
-                    <img src="./img/cta-1.png" alt="فريق اتقان الخليج لتنظيف الخزانات بالرياض">
+                <div style="text-align: center;" >
+                    <img src="./img/076bc8ff9daa2f58cdefc609bf5203f8-Photoroom.png" class="py-[40px]" alt="فريق اتقان الخليج لتنظيف الخزانات بالرياض">
                 </div>
             </div>
         </div>
@@ -2826,7 +2832,7 @@
 
 
     <!-- Why Choose Us Section -->
-   <section class="why-choose-section">
+   <section class="why-choose-section" id="why-choose-section">
     <div class="why-choose-container">
 
         <div class="why-choose-left">
@@ -2900,7 +2906,7 @@
         <div class="why-choose-right">
             <div class="why-choose-image">
                 <div style="text-align: center;">
-                    <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض - اتقان الخليج">
+                    <img src="./img/f1aec8e0ab8315978895a9b3bd921805-Photoroom.png" alt="تنظيف خزانات المياه بالرياض - اتقان الخليج">
                 </div>
             </div>
         </div>
@@ -2973,6 +2979,8 @@
             }
         });
     </script>
+
+    
     <div class="main-wrapper">
         <!-- Space for content above -->
         <div class="flex-grow"></div>
