@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanx Footer - Perfect Match</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-wrapper {
+            background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* Newsletter Container */
+        .newsletter-section {
+            position: relative;
+            z-index: 20;
+            margin-bottom: -50px;
+        }
+
+        .newsletter-card {
+            background-color: #000;
+            border: 12px solid #fff;
+            border-radius: 40px;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .icon-box {
+            background-color: #facc15; /* Yellow-400 */
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .input-container {
+            background-color: #fff;
+            border-radius: 100px;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .email-input {
+            border: none;
+            outline: none;
+            padding: 12px 25px;
+            width: 100%;
+            border-radius: 100px;
+            color: #000;
+            font-size: 16px;
+        }
+
+        .send-btn {
+            background-color: #facc15;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Main */
+        .footer-main {
+            background-color: #050505;
+            padding-top: 140px;
+            padding-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* The White Curve Background Effect */
+        .footer-curve {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background-color: #fff;
+            border-radius: 0 0 80px 80px;
+            z-index: 0;
+        }
+
+        /* The Black Overlay to create the shape in the image */
+        .footer-black-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #000;
+            border-radius: 0 0 60px 60px;
+            z-index: 1;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .brand-card {
+            background: linear-gradient(145deg, #111, #080808);
+            border: 1px solid #1a1a1a;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: -20px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-x {
+            color: #facc15;
+        }
+
+        .social-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: #facc15;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .social-circle:hover {
+            background-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-heading {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .footer-link {
+            color: #a1a1aa;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #facc15;
+        }
+
+        .footer-link span {
+            color: #facc15;
+            font-weight: bold;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: #a1a1aa;
+        }
+
+        .contact-icon {
+            color: #facc15;
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .copyright-bar {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+            color: #71717a;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            .newsletter-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .newsletter-card .flex {
+                flex-direction: column;
+            }
+            .input-container {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <!-- Space for content above -->
+        <div class="flex-grow"></div>
+
+        <!-- Newsletter Section -->
+        <div class="container mx-auto px-6 newsletter-section">
+            <div class="newsletter-card">
+                <div class="flex items-center gap-8">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-envelope-open-text text-black text-3xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h2 class="text-3xl font-extrabold text-white mb-2">Subscribe to Our Newsletter</h2>
+                        <p class="text-gray-400 max-w-md text-sm leading-relaxed">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        </p>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="email" placeholder="Email" class="email-input" id="emailInput">
+                    <button class="send-btn" onclick="subscribe()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-main">
+            <!-- Shape backgrounds -->
+            <div class="footer-curve"></div>
+            <div class="footer-black-overlay"></div>
+
+            <div class="container mx-auto px-6 footer-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    
+                    <!-- Brand Column -->
+                    <div class="brand-card">
+                        <div class="logo-text mb-6">
+                            Clean<span class="logo-x">x</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="social-circle"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="social-circle"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="lg:pl-10">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <nav>
+                            <a href="#" class="footer-link"><span>»</span> Home</a>
+                            <a href="#" class="footer-link"><span>»</span> About us</a>
+                            <a href="#" class="footer-link"><span>»</span> Portfolio</a>
+                            <a href="#" class="footer-link"><span>»</span> Our Services</a>
+                            <a href="#" class="footer-link"><span>»</span> Contact us</a>
+                        </nav>
+                    </div>
+
+                    <!-- Our Services -->
+                    <div>
+                        <h3 class="footer-heading">Our Services</h3>
+                        <nav>
+                            <a href="#" class="footer-link"><span>»</span> House Cleaning</a>
+                            <a href="#" class="footer-link"><span>»</span> Apartment Cleaning</a>
+                            <a href="#" class="footer-link"><span>»</span> Carpet Cleaning</a>
+                            <a href="#" class="footer-link"><span>»</span> Window Cleaning</a>
+                            <a href="#" class="footer-link"><span>»</span> Commercial Cleaning</a>
+                        </nav>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="footer-heading">Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <span>+1 (202) 555-0143</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <span>info@yourdomain.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <span>1234 Builder Avenue, Suite 200,<br>Houston, TX 77002, USA</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock contact-icon"></i>
+                            <span>Mon-Sat, 8:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright-bar">
+                    Copyright © 2025 Cleanx By Roxcreations. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function subscribe() {
+            const email = document.getElementById('emailInput').value;
+            if (email) {
+                alert('Thank you for subscribing: ' + email);
+                document.getElementById('emailInput').value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+    </script>
+</body>
+</html>
