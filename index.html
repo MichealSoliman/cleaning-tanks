@@ -169,12 +169,14 @@
             display: flex;
             gap: 30px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .top-bar-right {
             display: flex;
             gap: 15px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .social-icon {
@@ -213,6 +215,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo {
@@ -222,6 +225,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .logo-icon {
@@ -242,6 +246,8 @@
             gap: 40px;
             align-items: center;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-menu a {
@@ -251,6 +257,7 @@
             font-size: 14px;
             transition: color 0.3s ease;
             position: relative;
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
@@ -290,6 +297,8 @@
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .contact-btn:hover {
@@ -298,16 +307,18 @@
             box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
         }
 
-        .hamburger {
+        .hamb_urger {
             display: none;
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
             background: none;
             border: none;
+            padding: 5px;
+            flex-shrink: 0;
         }
 
-        .hamburger span {
+        .hamb_urger span {
             width: 25px;
             height: 3px;
             background-color: #1a1a1a;
@@ -316,50 +327,71 @@
 
         /* Mobile Menu */
         @media (max-width: 768px) {
-            .hamburger {
+            .hamb_urger {
                 display: flex;
             }
 
             .nav-menu {
                 position: absolute;
-                top: 70px;
+                top: 60px;
                 left: 0;
                 right: 0;
                 background-color: white;
                 flex-direction: column;
                 gap: 0;
-                padding: 20px;
+                padding: 0 20px;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease;
+                z-index: 99;
             }
 
             .nav-menu.active {
                 max-height: 400px;
+                padding: 20px;
             }
 
             .nav-menu a {
                 padding: 12px 0;
                 border-bottom: 1px solid #f0f0f0;
+                width: 100%;
+                text-align: center;
             }
 
-            .hamburger.active span:nth-child(1) {
+            .hamb_urger.active span:nth-child(1) {
                 transform: rotate(45deg) translate(8px, 8px);
             }
 
-            .hamburger.active span:nth-child(2) {
+            .hamb_urger.active span:nth-child(2) {
                 opacity: 0;
             }
 
-            .hamburger.active span:nth-child(3) {
+            .hamb_urger.active span:nth-child(3) {
                 transform: rotate(-45deg) translate(7px, -7px);
             }
 
+            .contact-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
             .top-bar-left {
                 flex-direction: column;
                 gap: 10px;
-                align-items: flex-start;
+                align-items: center;
+                width: 100%;
+            }
+
+            .top-bar-right {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                text-align: center;
             }
         }
 
@@ -403,6 +435,7 @@
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .btn-primary:hover {
@@ -424,6 +457,7 @@
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            white-space: nowrap;
         }
 
         .btn-secondary:hover {
@@ -658,6 +692,55 @@
             .hero-image {
                 margin-top: 30px;
             }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .stats-avatars {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+
+            .nav-menu a {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 22px;
+            }
+
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .navbar-container {
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -689,7 +772,7 @@
                 <span>clean<span style="color: #FFD700;">x</span></span>
             </div>
 
-            <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu" id="nav_Menu">
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Projects</a></li>
@@ -703,7 +786,7 @@
                 <i class="fas fa-arrow-right"></i>
             </button>
 
-            <button class="hamburger" id="hamburger">
+            <button class="hamb_urger" id="hamb_urger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -769,28 +852,28 @@
     </section>
 
     <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
+        // hamb_urger Menu Toggle
+        const hamb_urger = document.getElementById('hamb_urger');
+        const nav_Menu = document.getElementById('nav_Menu');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+        hamb_urger.addEventListener('click', () => {
+            hamb_urger.classList.toggle('active');
+            nav_Menu.classList.toggle('active');
         });
 
         // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
+        const nav_Links = document.querySelectorAll('.nav-menu a');
+        nav_Links.forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+                hamb_urger.classList.remove('active');
+                nav_Menu.classList.remove('active');
             });
         });
 
         // Active link highlighting
-        navLinks.forEach(link => {
+        nav_Links.forEach(link => {
             link.addEventListener('click', (e) => {
-                navLinks.forEach(l => l.classList.remove('active'));
+                nav_Links.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
             });
         });
@@ -807,17 +890,17 @@
         });
 
         // Contact button actions
-        const contactBtns = document.querySelectorAll('.contact-btn, .btn-primary');
-        contactBtns.forEach(btn => {
+        const contact__Btns = document.querySelectorAll('.contact-btn, .btn-primary');
+        contact__Btns.forEach(btn => {
             btn.addEventListener('click', () => {
                 alert('Contact form would open here!');
             });
         });
 
         // Schedule button action
-        const scheduleBtn = document.querySelector('.btn-secondary');
-        if (scheduleBtn) {
-            scheduleBtn.addEventListener('click', () => {
+        const schedule__Btn = document.querySelector('.btn-secondary');
+        if (schedule__Btn) {
+            schedule__Btn.addEventListener('click', () => {
                 alert('Schedule cleaning form would open here!');
             });
         }

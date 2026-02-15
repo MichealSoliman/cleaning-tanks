@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link
+<!-- Google Font: Cairo -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -17,13 +21,13 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+           font-family: 'Cairo', sans-serif;
             background-color: #ffffff;
             color: #333;
         }
 
         .font-display {
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         /* Animations */
@@ -32,6 +36,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -43,6 +48,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -54,6 +60,7 @@
                 opacity: 0;
                 transform: scale(0.95);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -61,9 +68,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-10px);
             }
@@ -86,15 +96,26 @@
         }
 
         /* Delay animations */
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(42, 42, 42, 0.85) 100%), 
-                         url('./img/Hero4.png') no-repeat center center/cover;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(42, 42, 42, 0.85) 100%),
+                url('./img/Hero4.png') no-repeat center center/cover;
             background-attachment: fixed;
             position: relative;
             overflow: hidden;
@@ -617,7 +638,8 @@
                 flex-direction: column;
             }
 
-            .btn-primary, .btn-secondary {
+            .btn-primary,
+            .btn-secondary {
                 width: 100%;
                 justify-content: center;
             }
@@ -665,10 +687,21 @@
             opacity: 0;
         }
 
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .service-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .service-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         .service-card:hover {
             transform: translateY(-10px);
@@ -678,6 +711,7 @@
         .service-image {
             width: 40%;
             background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%);
+            border: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -700,8 +734,8 @@
 
         .service-arrow {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            bottom: 20px;
+            left: 20px;
             width: 40px;
             height: 40px;
             background-color: #FFD700;
@@ -724,7 +758,7 @@
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         .service-description {
@@ -759,7 +793,7 @@
             color: #1a1a1a;
             margin-bottom: 20px;
             line-height: 1.2;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         .who-we-are-left p {
@@ -815,16 +849,24 @@
             opacity: 0;
         }
 
-        .stat-box:nth-child(1) { animation-delay: 0.2s; }
-        .stat-box:nth-child(2) { animation-delay: 0.3s; }
-        .stat-box:nth-child(3) { animation-delay: 0.4s; }
+        .stat-box:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .stat-box:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .stat-box:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
         .stat-box-number {
             font-size: 36px;
             font-weight: 800;
             color: #1a1a1a;
             margin-bottom: 8px;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         .stat-box-label {
@@ -963,7 +1005,7 @@
         }
     </style>
 
-     <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -971,13 +1013,13 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+           font-family: 'Cairo', sans-serif;
             background-color: #ffffff;
             color: #333;
         }
 
         .font-display {
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         /* Animations */
@@ -986,6 +1028,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -997,6 +1040,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1008,6 +1052,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1019,6 +1064,7 @@
                 opacity: 0;
                 transform: scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -1026,9 +1072,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-5px);
             }
@@ -1105,7 +1154,7 @@
             color: #1a1a1a;
             margin-bottom: 20px;
             line-height: 1.2;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
             opacity: 0;
             animation: slideInLeft 0.8s ease-out 0.2s forwards;
         }
@@ -1162,10 +1211,21 @@
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        .service-item:nth-child(1) { animation-delay: 0.4s; }
-        .service-item:nth-child(2) { animation-delay: 0.5s; }
-        .service-item:nth-child(3) { animation-delay: 0.6s; }
-        .service-item:nth-child(4) { animation-delay: 0.7s; }
+        .service-item:nth-child(1) {
+            animation-delay: 0.4s;
+        }
+
+        .service-item:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .service-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .service-item:nth-child(4) {
+            animation-delay: 0.7s;
+        }
 
         .service-image-wrapper {
             flex: 0 0 45%;
@@ -1175,32 +1235,18 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
+        .service-image-wrapper .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .service-item:hover .service-image-wrapper {
             transform: scale(1.05);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .service-image {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-            text-align: center;
-            padding: 20px;
-            min-height: 300px;
-            position: relative;
-        }
 
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
         .service-content {
             flex: 1;
@@ -1220,23 +1266,7 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .service-arrow {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 45px;
-            height: 45px;
-            background-color: #FFD700;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1a1a1a;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
+
 
         .service-arrow:hover {
             transform: scale(1.15) rotate(45deg);
@@ -1247,7 +1277,7 @@
             font-size: 26px;
             font-weight: 700;
             margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         .service-text {
@@ -1333,7 +1363,7 @@
             transform: translateY(0);
         }
     </style>
-        <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -1341,13 +1371,13 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+           font-family: 'Cairo', sans-serif;
             background-color: #ffffff;
             color: #333;
         }
 
         .font-display {
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         /* Animations */
@@ -1356,6 +1386,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1367,6 +1398,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1378,6 +1410,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1389,6 +1422,7 @@
                 opacity: 0;
                 transform: scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -1396,9 +1430,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-5px);
             }
@@ -1458,7 +1495,7 @@
             color: white;
             margin-bottom: 20px;
             line-height: 1.2;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
             opacity: 0;
             animation: slideInLeft 0.8s ease-out 0.1s forwards;
         }
@@ -1533,7 +1570,7 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
-            border-radius: 20px;
+            border-radius: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1610,7 +1647,7 @@
             color: #1a1a1a;
             margin-bottom: 20px;
             line-height: 1.2;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
             opacity: 0;
             animation: slideInLeft 0.8s ease-out 0.2s forwards;
         }
@@ -1640,10 +1677,21 @@
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        .feature-card:nth-child(1) { animation-delay: 0.4s; }
-        .feature-card:nth-child(2) { animation-delay: 0.5s; }
-        .feature-card:nth-child(3) { animation-delay: 0.6s; }
-        .feature-card:nth-child(4) { animation-delay: 0.7s; }
+        .feature-card:nth-child(1) {
+            animation-delay: 0.4s;
+        }
+
+        .feature-card:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .feature-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .feature-card:nth-child(4) {
+            animation-delay: 0.7s;
+        }
 
         .feature-card:hover {
             transform: translateY(-10px);
@@ -1669,7 +1717,7 @@
             font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 12px;
-            font-family: 'Playfair Display', serif;
+               font-family: 'Cairo', sans-serif;
         }
 
         .feature-card p {
@@ -1781,11 +1829,10 @@
             }
         }
     </style>
-       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-        
+    <style>
+
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+              font-family: 'Cairo', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -1812,11 +1859,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         .icon-box {
-            background-color: #facc15; /* Yellow-400 */
+            background-color: #facc15;
+            /* Yellow-400 */
             width: 70px;
             height: 70px;
             border-radius: 18px;
@@ -1995,22 +2043,25 @@
                 text-align: center;
                 padding: 30px;
             }
+
             .newsletter-card .flex {
                 flex-direction: column;
             }
+
             .input-container {
                 margin-top: 20px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div class="top-bar-content">
                 <div class="top-bar-left">
-                    <span>📞 +1 (202) 555-0143</span>
+                    <span>📞 0541178508</span>
                     <span>📧 info@yourdomain.com</span>
                 </div>
                 <div class="top-bar-right">
@@ -2027,17 +2078,19 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <div class="logo-icon">C</div>
-                <span>clean<span style="color: #FFD700;">x</span></span>
+                <div class="logo-icon">
+                    <img src="./img/Tشعار اتقان الخليج.png" class="w-16 h-16" alt="">
+                </div>
+                <span>اتقان <span style="color: #FFD700;">الخليج</span></span>
             </div>
-            
-            <ul class="nav-menu" id="navMenu">
+
+            <ul class="nav-menu" id="nav_Menu">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#">الرائيسية</a></li>
+                <li><a href="#">من نحن </a></li>
+                <li><a href="#">خدماتنا </a></li>
+                <li><a href="#">لماذا تختارنا </a></li>
+                <li><a href="#"> اتصال بنا </a></li>
             </ul>
 
             <button class="contact-btn">
@@ -2045,65 +2098,246 @@
                 <i class="fas fa-arrow-right"></i>
             </button>
 
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="ham_burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
     </nav>
+    <style>
+        /* تعديلات Responsive - مع الحفاظ على الكلاسات الأصلية */
+
+        /* إخفاء الـ Hamburger في الشاشات الكبيرة */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+            flex-shrink: 0;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+
+        /* الشاشات الصغيرة */
+        @media screen and (max-width: 768px) {
+
+            /* إظهار الـ Hamburger */
+            .hamburger {
+                display: flex !important;
+            }
+
+            /* إخفاء زر التواصل */
+            .contact-btn {
+                display: none !important;
+            }
+
+            /* تنسيق القائمة للموبايل */
+            .nav-menu {
+                position: absolute !important;
+                top: 70px !important;
+                left: 0 !important;
+                right: 0 !important;
+                background-color: white !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+                max-height: 0 !important;
+                overflow: hidden !important;
+                transition: max-height 0.4s ease-in-out !important;
+                z-index: 999 !important;
+                width: 100% !important;
+                list-style: none !important;
+            }
+
+            /* عند تفعيل القائمة */
+            .nav-menu.active {
+                max-height: 400px !important;
+                padding: 15px 0 !important;
+            }
+
+            /* تنسيق عناصر القائمة */
+            .nav-menu li {
+                width: 100% !important;
+                text-align: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .nav-menu a {
+                display: block !important;
+                padding: 15px 20px !important;
+                width: 100% !important;
+                color: #333 !important;
+                font-size: 16px !important;
+                font-weight: 500 !important;
+                text-decoration: none !important;
+                border-bottom: 1px solid #f0f0f0 !important;
+                transition: all 0.3s ease !important;
+            }
+
+            .nav-menu a:hover {
+                background-color: #f8f8f8 !important;
+                color: #FFD700 !important;
+            }
+
+            .nav-menu a.active {
+                color: #FFD700 !important;
+                background-color: #f8f8f8 !important;
+            }
+
+            /* إزالة الخط السفلي للروابط في الموبايل */
+            .nav-menu a::after {
+                display: none !important;
+            }
+
+            /* تأثير تحويل الـ Hamburger إلى X */
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(8px, 8px) !important;
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0 !important;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px) !important;
+            }
+
+            /* تثبيت الـ Navbar */
+            .navbar {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 1000 !important;
+            }
+
+            /* تحسين الـ Logo */
+            .logo {
+                font-size: 24px !important;
+            }
+        }
+
+        /* شاشات صغيرة جداً */
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 20px !important;
+            }
+
+            .logo-icon {
+                width: 35px !important;
+                height: 35px !important;
+                font-size: 18px !important;
+            }
+
+            .navbar-container {
+                gap: 10px !important;
+            }
+
+            .hamburger span {
+                width: 22px !important;
+            }
+        }
+    </style>
+    <script>
+        // Hamburger Menu Toggle
+        const ham_burger = document.getElementById('ham_burger');
+        const nav_Menu = document.getElementById('nav_Menu');
+
+        ham_burger.addEventListener('click', () => {
+            ham_burger.classList.toggle('active');
+            nav_Menu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const nav_Links = document.querySelectorAll('.nav-menu a');
+        nav_Links.forEach(link => {
+            link.addEventListener('click', () => {
+                ham_burger.classList.remove('active');
+                nav_Menu.classList.remove('active');
+            });
+        });
+
+        // Active link highlighting
+        nav_Links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                nav_Links.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Close menu when clicking outside (اختياري - لتحسين تجربة المستخدم)
+        document.addEventListener('click', (e) => {
+            if (!ham_burger.contains(e.target) && !nav_Menu.contains(e.target)) {
+                ham_burger.classList.remove('active');
+                nav_Menu.classList.remove('active');
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                ham_burger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; position: relative; min-height: 600px;">
+        <div
+            style="max-width: 1200px; margin: 0 auto; padding: 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; position: relative; min-height: 600px;">
             <!-- Left Content -->
             <div class="hero-content">
                 <h1 class="hero-title animate-fade-in-up">
-                    Reliable
+                    اتقان الخليج
                     <br>
-                    <span class="highlight">Cleaning Services</span>
+                    <span class="highlight">لتنظيف وصيانة وعزل الخزانات</span>
                     <br>
-                    You Can Trust
+                    بالرياض
                 </h1>
-                <p class="hero-description animate-fade-in-up delay-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                </p>
-                <div class="hero-buttons animate-fade-in-up delay-2">
-                    <button class="btn-primary">
-                        Contact us
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn-secondary">
-                        Schedule Cleaning
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
 
-                <!-- Stats Box -->
-                <!-- <div class="stats-box animate-scale-in delay-3">
-                    <div class="stats-number">2.5k+</div>
-                    <div class="stats-label">Client Review</div>
-                    <div class="stats-avatars">
-                        <div class="avatar">A</div>
-                        <div class="avatar">B</div>
-                        <div class="avatar">C</div>
-                        <div class="avatar">D</div>
-                        <div class="avatar-plus">+</div>
-                    </div>
-                </div> -->
+                <p class="hero-description animate-fade-in-up delay-1">
+                    نقدم خدمات تنظيف وتعقيم وعزل خزانات المياه بأعلى معايير الجودة في الرياض.
+                    فريق متخصص يستخدم أحدث المعدات والمواد الآمنة لضمان مياه نظيفة وصحية
+                    مع سرعة في التنفيذ وضمان على الخدمة.
+                </p>
+
+                <div class="hero-buttons animate-fade-in-up delay-2">
+                    <a href="tel:0541178508" class="btn-primary">
+                        اتصل بنا الآن
+                        <i class="fas fa-phone"></i>
+                    </a>
+
+                    <a href="https://wa.me/966541178508" target="_blank" class="btn-secondary">
+                        تواصل عبر واتساب
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
+
 
             <!-- Right Content (Hero Image) -->
             <div class="hero-image">
                 <!-- Placeholder for hero image with animation -->
-                <div style="position: relative; width: 100%; height: 500px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; animation: slideInRight 0.8s ease-out;">
+                <div
+                    style="position: relative; width: 100%; height: 500px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; animation: slideInRight 0.8s ease-out;">
                     <div style="text-align: center; color: rgba(255, 255, 255, 0.3);">
                         <i class="fas fa-image" style="font-size: 60px; margin-bottom: 20px; display: block;"></i>
                         <img src="./img/Hero4.png" alt="">
                     </div>
                 </div>
 
-              
+
             </div>
         </div>
     </section>
@@ -2112,115 +2346,144 @@
     <section class="who-we-are-section">
         <!-- Services Grid -->
         <div class="services-grid">
+
+            <!-- تنظيف الخزانات -->
             <div class="service-card">
                 <div class="service-image">
-                    <div style="text-align: center;">
-                        <i class="fas fa-home" style="font-size: 40px; margin-bottom: 10px; display: block;"></i>
-                        <p>Residential Home</p>
+                    <div style="text-align: center; border-radius: 20px;" class="overflow-hidden rounded-xl">
+                        <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض"
+                            class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
                     </div>
                 </div>
+
                 <div class="service-content">
                     <div>
-                        <h3 class="service-title">Residential Cleaning</h3>
-                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus.</p>
+                        <h3 class="service-title">تنظيف خزانات المياه بالرياض</h3>
+                        <p class="service-description">
+                            نقدم في اتقان الخليج خدمة تنظيف خزانات المياه الأرضية والعلوية
+                            باستخدام معدات حديثة لإزالة الرواسب والطحالب والبكتيريا،
+                            لضمان مياه نقية وآمنة تمامًا للاستخدام اليومي.
+                        </p>
                     </div>
+
                     <div class="service-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                        <a href="tel:0541178508">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <!-- تعقيم الخزانات -->
             <div class="service-card">
                 <div class="service-image">
-                    <div style="text-align: center;">
-                        <i class="fas fa-building" style="font-size: 40px; margin-bottom: 10px; display: block;"></i>
-                        <p>Commercial Building</p>
+                    <div style="text-align: center; border-radius: 20px;" class="overflow-hidden rounded-xl">
+                        <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض"
+                            class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
                     </div>
                 </div>
+
                 <div class="service-content">
                     <div>
-                        <h3 class="service-title">Commercial Cleaning</h3>
-                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus.</p>
+                        <h3 class="service-title">تعقيم خزانات المياه بأفضل المواد المعتمدة</h3>
+                        <p class="service-description">
+                            نستخدم مواد تعقيم آمنة ومعتمدة من الجهات المختصة للقضاء على
+                            الجراثيم والميكروبات بنسبة تصل إلى 99%،
+                            مع ضمان الحفاظ على جودة المياه وصحة أفراد الأسرة.
+                        </p>
                     </div>
+
                     <div class="service-arrow">
-                        <i class="fas fa-arrow-right"></i>
+                        <a href="https://wa.me/966541178508" target="_blank">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
+
 
         <!-- Who We Are Content -->
-        <div class="who-we-are-content">
-            <div class="who-we-are-left">
-                <h3>
-                    <span style="color: #FFD700; font-size: 16px;">👋</span>
-                    Who We Are
-                </h3>
-                <h2>Expert Cleaning Solutions for Fresh, Healthy Spaces.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+       <div class="who-we-are-content">
+    <div class="who-we-are-left">
+        <h3>
+            <span style="color: #FFD700; font-size: 16px;">👋</span>
+            من نحن
+        </h3>
 
-                <div class="features-list">
-                    <div class="feature-item">
-                        <div class="feature-icon">👔</div>
-                        <span>Professional Staff</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">⏰</div>
-                        <span>On-Time Service</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🛡️</div>
-                        <span>Safe & Eco-Friendly</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🧹</div>
-                        <span>Attention to Detail</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🕐</div>
-                        <span>24/7 Support</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">✓</div>
-                        <span>Satisfaction Guaranteed</span>
-                    </div>
-                </div>
+        <h2>خبراء تنظيف وتعقيم وصيانة الخزانات في الرياض</h2>
 
-                <div class="stats-container">
-                    <div class="stat-box">
-                        <div class="stat-box-number">2.5k+</div>
-                        <div class="stat-box-label">Cleanings Completed</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-box-number">15+</div>
-                        <div class="stat-box-label">Expert Cleaners</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-box-number">2.5k+</div>
-                        <div class="stat-box-label">Completed Projects</div>
-                    </div>
-                </div>
+        <p>
+            في اتقان الخليج نقدم خدمات احترافية لتنظيف وتعقيم وعزل خزانات المياه 
+            باستخدام أحدث المعدات ومواد آمنة ومعتمدة، لضمان مياه نقية وصحية 
+            تحافظ على سلامة عائلتك وجودة الاستخدام اليومي.
+        </p>
+
+        <div class="features-list">
+            <div class="feature-item">
+                <div class="feature-icon">👷</div>
+                <span>فريق عمل متخصص ومدرب</span>
             </div>
-
-            <div class="who-we-are-right">
-                <div class="team-image">
-                    <div style="text-align: center; color: rgba(255, 255, 255, 0.5);">
-                        <i class="fas fa-image" style="font-size: 60px; margin-bottom: 20px; display: block;"></i>
-                        <img src="./img/Hero4.png" alt="">
-                    </div>
-                </div>
-
-                <div class="satisfaction-badge">
-                    <div class="satisfaction-number">100%</div>
-                    <div class="satisfaction-label">Satisfaction Rate</div>
-                </div>
-
-                <button class="more-about-btn">
-                    More About us
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+            <div class="feature-item">
+                <div class="feature-icon">⏰</div>
+                <span>التزام كامل بالمواعيد</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🧪</div>
+                <span>مواد تعقيم آمنة ومعتمدة</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <span>فحص دقيق قبل وبعد الخدمة</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🚿</div>
+                <span>إزالة الرواسب والطحالب بالكامل</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">✓</div>
+                <span>ضمان جودة على جميع الخدمات</span>
             </div>
         </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-box-number">3000+</div>
+                <div class="stat-box-label">خزان تم تنظيفه</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-box-number">10+</div>
+                <div class="stat-box-label">سنوات خبرة</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-box-number">100%</div>
+                <div class="stat-box-label">رضا العملاء</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="who-we-are-right">
+        <div class="team-image">
+            <div style="text-align: center;">
+                <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض"  class="w-full transition-transform duration-500 ease-in-out hover:scale-110">
+            </div>
+        </div>
+
+        <div class="satisfaction-badge">
+            <div class="satisfaction-number">100%</div>
+            <div class="satisfaction-label">نسبة رضا العملاء</div>
+        </div>
+
+        <a href="tel:0541178508" class="more-about-btn">
+            تواصل معنا الآن
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+</div>
+
     </section>
 
     <script>
@@ -2255,9 +2518,9 @@
             const elements = document.querySelectorAll('.animate-fade-in-up, .animate-scale-in, .animate-slide-in-right');
             elements.forEach(el => {
                 el.style.opacity = '0';
-                el.style.transform = el.classList.contains('animate-scale-in') ? 'scale(0.95)' : 
-                                     el.classList.contains('animate-slide-in-right') ? 'translateX(50px)' : 
-                                     'translateY(30px)';
+                el.style.transform = el.classList.contains('animate-scale-in') ? 'scale(0.95)' :
+                    el.classList.contains('animate-slide-in-right') ? 'translateX(50px)' :
+                        'translateY(30px)';
             });
         });
 
@@ -2313,117 +2576,142 @@
         });
     </script>
 
-        <!-- Services Section -->
-    <section class="services-section">
-        <div class="services-container">
-            <!-- Header -->
-            <div class="services-header">
-                <div class="services-header-left">
-                    <h3>
-                        <span style="color: #FFD700; font-size: 16px;">✨</span>
-                        Expert Cleaning Solutions
-                    </h3>
-                    <h2>Reliable Cleaning Solutions for Homes and Offices.</h2>
-                </div>
-                <div class="services-header-right">
-                    <p class="services-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                    </p>
-                    <button class="explore-btn">
-                        Explore All Services
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
+    <!-- Services Section -->
+   <section class="services-section">
+    <div class="services-container">
+
+        <!-- Header -->
+        <div class="services-header">
+            <div class="services-header-left">
+                <h3>
+                    <span style="color: #FFD700; font-size: 16px;">✨</span>
+                    خدماتنا المتخصصة
+                </h3>
+                <h2>حلول متكاملة لصيانة وحماية خزانات المياه بالرياض</h2>
             </div>
-
-            <!-- Services Grid -->
-            <div class="services-grid">
-                <!-- Service 1: Residential Cleaning -->
-                <div class="service-item scroll-animate">
-                    <div class="service-image-wrapper">
-                        <div class="service-image">
-                            <div style="text-align: center;">
-                                <i class="fas fa-home" style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                                <p>Beautiful Residential Home</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div>
-                            <h3 class="service-title">Residential Cleaning</h3>
-                            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                        </div>
-                        <div class="service-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 2: Apartment Cleaning -->
-                <div class="service-item scroll-animate">
-                    <div class="service-image-wrapper">
-                        <div class="service-image">
-                            <div style="text-align: center;">
-                                <i class="fas fa-door-open" style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                                <p>Modern Apartment Space</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div>
-                            <h3 class="service-title">Apartment Cleaning</h3>
-                            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                        </div>
-                        <div class="service-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3: Office Cleaning -->
-                <div class="service-item scroll-animate">
-                    <div class="service-image-wrapper">
-                        <div class="service-image">
-                            <div style="text-align: center;">
-                                <i class="fas fa-briefcase" style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                                <p>Professional Office Space</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div>
-                            <h3 class="service-title">Office Cleaning</h3>
-                            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                        </div>
-                        <div class="service-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4: Window & Glass Cleaning -->
-                <div class="service-item scroll-animate">
-                    <div class="service-image-wrapper">
-                        <div class="service-image">
-                            <div style="text-align: center;">
-                                <i class="fas fa-window-maximize" style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
-                                <p>Sparkling Glass Windows</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <div>
-                            <h3 class="service-title">Window & Glass Cleaning</h3>
-                            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                        </div>
-                        <div class="service-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="services-header-right">
+                <p class="services-description">
+                    في اتقان الخليج نوفر خدمات احترافية لعزل وصيانة ومعالجة خزانات المياه
+                    بأحدث التقنيات لضمان حماية الخزان من التسربات والتلوث
+                    والحفاظ على جودة المياه لفترات طويلة.
+                </p>
+                <a href="tel:0541178508" class="explore-btn">
+                    احجز خدمتك الآن
+                    <i class="fas fa-phone"></i>
+                </a>
             </div>
         </div>
-    </section>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+
+            <!-- Service 1: عزل الخزانات -->
+            <div class="service-item scroll-animate">
+                <div class="service-image-wrapper">
+                    <div class="service-image">
+                        <div style="text-align: center;">
+                           
+                            <img src="./img/Hero4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3 class="service-title">عزل الخزانات</h3>
+                        <p class="service-text">
+                            تنفيذ أعمال عزل خزانات المياه بمواد عالية الجودة
+                            مقاومة للرطوبة والتشققات، لضمان منع تسرب المياه
+                            وحماية الهيكل الخرساني لفترات طويلة.
+                        </p>
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: كشف تسربات الخزانات -->
+            <div class="service-item scroll-animate">
+                <div class="service-image-wrapper">
+                    <div class="service-image">
+                        <div style="text-align: center;">
+                            <i class="fas fa-search-location"
+                                style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
+                            <p>كشف دقيق بدون تكسير</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3 class="service-title">كشف تسربات الخزانات</h3>
+                        <p class="service-text">
+                            نستخدم أجهزة حديثة لتحديد أماكن التسرب بدقة
+                            دون الحاجة للتكسير، مع تقديم حلول سريعة
+                            تمنع الهدر وتحافظ على سلامة المبنى.
+                        </p>
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: معالجة المياه -->
+            <div class="service-item scroll-animate">
+                <div class="service-image-wrapper">
+                    <div class="service-image">
+                        <div style="text-align: center;">
+                            <i class="fas fa-filter"
+                                style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
+                            <p>تنقية وتحسين جودة المياه</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3 class="service-title">معالجة المياه</h3>
+                        <p class="service-text">
+                            تركيب وصيانة أنظمة معالجة وتنقية المياه
+                            لإزالة الشوائب والأملاح والروائح،
+                            والحفاظ على مياه نظيفة وصحية للاستخدام اليومي.
+                        </p>
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: صيانة الخزانات -->
+            <div class="service-item scroll-animate">
+                <div class="service-image-wrapper">
+                    <div class="service-image">
+                        <div style="text-align: center;">
+                            <i class="fas fa-tools"
+                                style="font-size: 50px; margin-bottom: 15px; display: block;"></i>
+                            <p>صيانة دورية شاملة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3 class="service-title">صيانة الخزانات</h3>
+                        <p class="service-text">
+                            نقدم برامج صيانة دورية لخزانات المياه
+                            تشمل الفحص والإصلاح والتأكد من سلامة العزل،
+                            لضمان تشغيل آمن ومستمر دون أعطال مفاجئة.
+                        </p>
+                    </div>
+                    <div class="service-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <script>
         // Scroll Animation Observer
@@ -2480,15 +2768,15 @@
         window.addEventListener('scroll', () => {
             const section = document.querySelector('.services-section');
             const scrollPosition = window.pageYOffset;
-            
+
             const beforeElement = document.querySelector('.services-section::before');
             const afterElement = document.querySelector('.services-section::after');
-            
+
             if (section) {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
                 const windowHeight = window.innerHeight;
-                
+
                 // Calculate if section is in view
                 if (scrollPosition + windowHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     const parallaxOffset = (scrollPosition - sectionTop) * 0.5;
@@ -2498,94 +2786,128 @@
         });
     </script>
 
-        <!-- Trusted Section -->
-    <section class="trusted-section">
-        <div class="trusted-container">
-            <div class="trusted-content">
-                <h2>Trusted by Thousands of Businesses Worldwide</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
-                <div class="trusted-buttons">
-                    <button class="btn-primary-trusted">
-                        Contact us
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn-secondary-trusted">
-                        Schedule Cleaning
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
+    <!-- Trusted Section -->
+ <section class="trusted-section">
+    <div class="trusted-container">
+
+        <div class="trusted-content">
+            <h2>موثوقون من مئات العملاء في الرياض</h2>
+
+            <p>
+                نفتخر في اتقان الخليج بثقة عملائنا في جميع أحياء الرياض،
+                حيث قدمنا خدمات تنظيف وتعقيم وعزل خزانات المياه بأعلى معايير الجودة.
+                هدفنا هو ضمان مياه نقية وآمنة لكل منزل ومنشأة مع سرعة في التنفيذ
+                وضمان حقيقي على جميع الأعمال.
+            </p>
+
+            <div class="trusted-buttons">
+                <a href="tel:0541178508" class="btn-primary-trusted">
+                    اتصل بنا الآن
+                    <i class="fas fa-phone"></i>
+                </a>
+
+                <a href="https://wa.me/966541178508" target="_blank" class="btn-secondary-trusted">
+                    تواصل عبر واتساب
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
-            <div class="trusted-image">
-                <div class="trusted-image-placeholder">
-                    <div style="text-align: center;">
-                        <i class="fas fa-image" style="font-size: 60px; margin-bottom: 20px; display: block;"></i>
-                        <p>Team Image Area</p>
-                    </div>
+        </div>
+
+        <div class="trusted-image">
+            <div class="trusted-image-placeholder">
+                <div style="text-align: center;">
+                    <img src="./img/cta-1.png" alt="فريق اتقان الخليج لتنظيف الخزانات بالرياض">
                 </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <!-- Why Choose Us Section -->
-    <section class="why-choose-section">
-        <div class="why-choose-container">
-            <div class="why-choose-left">
-                <h3>
-                    <span style="color: #FFD700; font-size: 16px;">⭐</span>
-                    Why Choose Us
-                </h3>
-                <h2>Fast, Safe, and Hassle-Free Cleaning Solutions.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+   <section class="why-choose-section">
+    <div class="why-choose-container">
 
-                <div class="features-grid">
-                    <!-- Feature 1 -->
-                    <div class="feature-card scroll-animate">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>Trained & Experienced Cleaners</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.</p>
-                    </div>
+        <div class="why-choose-left">
+            <h3>
+                <span style="color: #FFD700; font-size: 16px;">⭐</span>
+                لماذا تختار اتقان الخليج
+            </h3>
 
-                    <!-- Feature 2 -->
-                    <div class="feature-card scroll-animate">
-                        <div class="feature-icon">
-                            <i class="fas fa-tag"></i>
-                        </div>
-                        <h3>Affordable & Transparent Pricing</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.</p>
-                    </div>
+            <h2>خبرة وجودة وأمان في تنظيف وصيانة خزانات المياه بالرياض</h2>
 
-                    <!-- Feature 3 -->
-                    <div class="feature-card scroll-animate">
-                        <div class="feature-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Modern Tools & Equipment</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.</p>
-                    </div>
+            <p>
+                نتميز في اتقان الخليج بتقديم خدمات تنظيف وتعقيم وعزل الخزانات
+                وفق أعلى معايير السلامة والجودة، باستخدام مواد معتمدة
+                وأجهزة حديثة تضمن حماية الخزان والحفاظ على نقاء المياه
+                لفترات طويلة دون مشاكل أو تسربات.
+            </p>
 
-                    <!-- Feature 4 -->
-                    <div class="feature-card scroll-animate">
-                        <div class="feature-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3>100% Satisfaction Guarantee</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper.</p>
+            <div class="features-grid">
+
+                <!-- Feature 1 -->
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-cog"></i>
                     </div>
+                    <h3>فريق متخصص ومدرب</h3>
+                    <p>
+                        نمتلك فريق عمل بخبرة طويلة في تنظيف وصيانة الخزانات
+                        مع تنفيذ دقيق لكل مرحلة من مراحل العمل.
+                    </p>
                 </div>
-            </div>
 
-            <div class="why-choose-right">
-                <div class="why-choose-image">
-                    <div style="text-align: center;">
-                        <i class="fas fa-image" style="font-size: 60px; margin-bottom: 20px; display: block;"></i>
-                        <p>Cleaning Staff Image Area</p>
+                <!-- Feature 2 -->
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
+                    <h3>مواد آمنة ومعتمدة</h3>
+                    <p>
+                        نستخدم مواد تنظيف وتعقيم مطابقة للمواصفات
+                        وآمنة تمامًا على صحة الإنسان وجودة المياه.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>كشف دقيق للتسربات</h3>
+                    <p>
+                        نعتمد على أجهزة حديثة لاكتشاف أي تسرب أو تلف
+                        داخل الخزان دون تكسير أو إتلاف.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>ضمان جودة 100%</h3>
+                    <p>
+                        نلتزم بأعلى مستويات الجودة ونضمن رضا العميل
+                        الكامل عن الخدمة المقدمة في جميع أحياء الرياض.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="why-choose-right">
+            <div class="why-choose-image">
+                <div style="text-align: center;">
+                    <img src="./img/Hero4.png" alt="تنظيف خزانات المياه بالرياض - اتقان الخليج">
                 </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <script>
         // Scroll Animation Observer
@@ -2651,109 +2973,135 @@
             }
         });
     </script>
- <div class="main-wrapper">
+    <div class="main-wrapper">
         <!-- Space for content above -->
         <div class="flex-grow"></div>
 
         <!-- Newsletter Section -->
         <div class="container mx-auto px-6 newsletter-section">
-            <div class="newsletter-card">
-                <div class="flex items-center gap-8">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-envelope-open-text text-black text-3xl"></i>
-                    </div>
-                    <div class="text-left">
-                        <h2 class="text-3xl font-extrabold text-white mb-2">Subscribe to Our Newsletter</h2>
-                        <p class="text-gray-400 max-w-md text-sm leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        </p>
-                    </div>
+    <div class="newsletter-card">
+        <div class="flex items-center gap-8">
+            
+            <div class="icon-box">
+                <i class="fa-solid fa-phone text-black text-3xl"></i>
+            </div>
+
+            <div class="text-left">
+                <h2 class="text-3xl font-extrabold text-white mb-2">
+                    احجز خدمة تنظيف الخزانات الآن
+                </h2>
+
+                <p class="text-gray-400 max-w-md text-sm leading-relaxed">
+                    تواصل مع فريق اتقان الخليج لتنظيف وتعقيم وصيانة خزانات المياه بالرياض.
+                    خدمة سريعة – مواد آمنة – ضمان جودة 100%.
+                    احمِ مياه منزلك اليوم.
+                </p>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input 
+                type="tel" 
+                placeholder="اكتب رقم جوالك" 
+                class="email-input" 
+                id="phoneInput"
+            >
+
+            <a href="tel:0541178508" class="send-btn">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Footer -->
+       <footer class="footer-main">
+    <!-- Shape backgrounds -->
+    <div class="footer-curve"></div>
+    <div class="footer-black-overlay"></div>
+
+    <div class="container mx-auto px-6 footer-content">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-12">
+
+            <!-- Brand Column -->
+            <div class="brand-card">
+                <div class="logo-text mb-6">
+                    اتقان <span class="logo-x">الخليج</span>
                 </div>
-                <div class="input-container">
-                    <input type="email" placeholder="Email" class="email-input" id="emailInput">
-                    <button class="send-btn" onclick="subscribe()">
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                    شركة متخصصة في تنظيف وتعقيم وعزل وصيانة خزانات المياه بالرياض.
+                    نضمن لك مياه نقية وآمنة باستخدام أحدث المعدات ومواد معتمدة
+                    مع التزام كامل بالجودة والمواعيد.
+                </p>
+
+                <div class="flex gap-4">
+                    <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-circle"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://wa.me/966541178508" target="_blank" class="social-circle">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="lg:pl-10">
+                <h3 class="footer-heading">روابط سريعة</h3>
+                <nav>
+                    <a href="#home" class="footer-link"><span>»</span> الرئيسية</a>
+                    <a href="#about" class="footer-link"><span>»</span> من نحن</a>
+                    <a href="#services" class="footer-link"><span>»</span> خدماتنا</a>
+                    <a href="#why" class="footer-link"><span>»</span> لماذا نحن</a>
+                    <a href="#contact" class="footer-link"><span>»</span> تواصل معنا</a>
+                </nav>
+            </div>
+
+            <!-- Our Services -->
+            <div>
+                <h3 class="footer-heading">خدماتنا</h3>
+                <nav>
+                    <a href="#" class="footer-link"><span>»</span> تنظيف الخزانات</a>
+                    <a href="#" class="footer-link"><span>»</span> تعقيم الخزانات</a>
+                    <a href="#" class="footer-link"><span>»</span> عزل الخزانات</a>
+                    <a href="#" class="footer-link"><span>»</span> كشف تسربات الخزانات</a>
+                    <a href="#" class="footer-link"><span>»</span> صيانة الخزانات</a>
+                </nav>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="footer-heading">معلومات التواصل</h3>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone contact-icon"></i>
+                    <span>0541178508</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-brands fa-whatsapp contact-icon"></i>
+                    <span>واتساب: 0541178508</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot contact-icon"></i>
+                    <span>الرياض - المملكة العربية السعودية</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-clock contact-icon"></i>
+                    <span>نعمل يومياً على مدار 24 ساعة</span>
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer-main">
-            <!-- Shape backgrounds -->
-            <div class="footer-curve"></div>
-            <div class="footer-black-overlay"></div>
+        <div class="copyright-bar">
+            © 2025 اتقان الخليج لتنظيف وصيانة وعزل الخزانات بالرياض - جميع الحقوق محفوظة
+        </div>
+    </div>
+</footer>
 
-            <div class="container mx-auto px-6 footer-content">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                    
-                    <!-- Brand Column -->
-                    <div class="brand-card">
-                        <div class="logo-text mb-6">
-                            Clean<span class="logo-x">x</span>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
-                        </p>
-                        <div class="flex gap-4">
-                            <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="social-circle"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#" class="social-circle"><i class="fa-brands fa-pinterest-p"></i></a>
-                            <a href="#" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="lg:pl-10">
-                        <h3 class="footer-heading">Quick Links</h3>
-                        <nav>
-                            <a href="#" class="footer-link"><span>»</span> Home</a>
-                            <a href="#" class="footer-link"><span>»</span> About us</a>
-                            <a href="#" class="footer-link"><span>»</span> Portfolio</a>
-                            <a href="#" class="footer-link"><span>»</span> Our Services</a>
-                            <a href="#" class="footer-link"><span>»</span> Contact us</a>
-                        </nav>
-                    </div>
-
-                    <!-- Our Services -->
-                    <div>
-                        <h3 class="footer-heading">Our Services</h3>
-                        <nav>
-                            <a href="#" class="footer-link"><span>»</span> House Cleaning</a>
-                            <a href="#" class="footer-link"><span>»</span> Apartment Cleaning</a>
-                            <a href="#" class="footer-link"><span>»</span> Carpet Cleaning</a>
-                            <a href="#" class="footer-link"><span>»</span> Window Cleaning</a>
-                            <a href="#" class="footer-link"><span>»</span> Commercial Cleaning</a>
-                        </nav>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div>
-                        <h3 class="footer-heading">Contact Information</h3>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-phone contact-icon"></i>
-                            <span>+1 (202) 555-0143</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-envelope contact-icon"></i>
-                            <span>info@yourdomain.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-location-dot contact-icon"></i>
-                            <span>1234 Builder Avenue, Suite 200,<br>Houston, TX 77002, USA</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-clock contact-icon"></i>
-                            <span>Mon-Sat, 8:00 AM - 6:00 PM</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="copyright-bar">
-                    Copyright © 2025 Cleanx By Roxcreations. All Rights Reserved.
-                </div>
-            </div>
-        </footer>
     </div>
 
 
@@ -2769,4 +3117,5 @@
         }
     </script>
 </body>
+
 </html>
