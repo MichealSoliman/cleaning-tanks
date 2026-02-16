@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اتقان الخليج - تنظيف وصيانة الخزانات</title>
+    <title>اتقان الخليج - آراء العملاء</title>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -20,1211 +20,935 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #fafafa;
-            color: #1e293b;
+            background-color: #f8fafc;
+            color: #334155;
             line-height: 1.6;
         }
 
         /* ===== Container ===== */
-        .master-wrapper {
-            max-width: 1200px;
+        .wrapper-testimonials {
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* ===== Top Header ===== */
-        .top-header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 15px 0;
-        }
-
-        .header-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .contact-details {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .contact-details span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-        }
-
-        .contact-details i {
-            color: #fbbf24;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-link {
-            width: 32px;
-            height: 32px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-link:hover {
-            background: #fbbf24;
-            color: #0f172a;
-            transform: translateY(-3px);
-        }
-
-        /* ===== Navigation ===== */
-        .navigation-panel {
-            background: white;
-            padding: 15px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-box {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #0f172a;
-            transform: rotate(5deg);
-            transition: transform 0.3s;
-        }
-
-        .brand-box:hover .brand-icon {
-            transform: rotate(0deg);
-        }
-
-        .brand-text {
-            font-size: 28px;
-            font-weight: 800;
-            color: #0f172a;
-        }
-
-        .brand-text span {
-            color: #fbbf24;
-        }
-
-        .menu-list {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-        }
-
-        .menu-list a {
-            text-decoration: none;
-            color: #1e293b;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .menu-list a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: 0;
-            width: 0;
-            height: 2px;
-            background: #fbbf24;
-            transition: width 0.3s;
-        }
-
-        .menu-list a:hover::after,
-        .menu-list a.current::after {
-            width: 100%;
-        }
-
-        .menu-list a:hover,
-        .menu-list a.current {
-            color: #fbbf24;
-        }
-
-        .action-button {
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: #0f172a;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-
-        .action-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3);
-        }
-
-        .menu-trigger {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .menu-trigger span {
-            width: 28px;
-            height: 3px;
-            background: #0f172a;
-            transition: all 0.3s;
-        }
-
-        /* Mobile Menu */
-        @media (max-width: 992px) {
-            .menu-list {
-                gap: 20px;
-            }
-            
-            .menu-list a {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .menu-trigger {
-                display: flex;
-            }
-
-            .menu-list {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                gap: 0;
-                padding: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.4s;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            }
-
-            .menu-list.show {
-                max-height: 400px;
-                padding: 15px 0;
-            }
-
-            .menu-list li {
-                width: 100%;
-                text-align: center;
-            }
-
-            .menu-list a {
-                display: block;
-                padding: 15px;
-                border-bottom: 1px solid #f1f5f9;
-            }
-
-            .menu-list a::after {
-                display: none;
-            }
-
-            .action-button {
-                display: none;
-            }
-
-            .menu-trigger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(8px, 8px);
-            }
-
-            .menu-trigger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .menu-trigger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -7px);
-            }
-        }
-
-        /* ===== Hero Area ===== */
-        .hero-area {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        /* ===== قسم آراء العملاء ===== */
+        .testimonials-section {
             padding: 80px 0;
+            background-color: #ffffff;
             position: relative;
             overflow: hidden;
         }
 
-        .hero-area::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(251,191,36,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content h1 {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.2;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .hero-highlight {
-            color: #fbbf24;
-        }
-
-        .hero-description {
-            font-size: 16px;
-            color: #cbd5e1;
-            margin-bottom: 30px;
-            max-width: 500px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .primary-btn {
-            background: #fbbf24;
-            color: #0f172a;
-            padding: 14px 35px;
-            border-radius: 30px;
-            font-weight: 700;
-            border: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .primary-btn:hover {
-            background: #f59e0b;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(251,191,36,0.3);
-        }
-
-        .secondary-btn {
-            background: transparent;
-            color: white;
-            padding: 14px 35px;
-            border-radius: 30px;
-            font-weight: 700;
-            border: 2px solid #fbbf24;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .secondary-btn:hover {
-            background: #fbbf24;
-            color: #0f172a;
-            transform: translateY(-3px);
-        }
-
-        .stats-panel {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 25px;
+        /* رأس القسم */
+        .testimonials-head {
             text-align: center;
-            margin-top: 40px;
-        }
-
-        .stats-number {
-            font-size: 36px;
-            font-weight: 800;
-            color: white;
-        }
-
-        .stats-label {
-            color: #cbd5e1;
-            font-size: 14px;
-        }
-
-        .avatars-group {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        .avatar-item {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            border: 3px solid #0f172a;
-            margin-right: -10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #0f172a;
-        }
-
-        .avatar-more {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #fbbf24;
-            border: 3px solid #0f172a;
-            margin-right: -10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #0f172a;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .avatar-more:hover {
-            transform: scale(1.1);
-            background: #f59e0b;
-        }
-
-        .hero-image-box {
-            background: rgba(251,191,36,0.05);
-            border-radius: 30px;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(251,191,36,0.2);
-        }
-
-        .hero-image-placeholder i {
-            font-size: 80px;
-            color: rgba(251,191,36,0.3);
-        }
-
-        /* ===== Why Choose Us Section ===== */
-        .benefits-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-tag {
-            display: inline-block;
-            background: #fef3c7;
-            color: #fbbf24;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-size: 42px;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 15px;
-        }
-
-        .section-desc {
-            font-size: 16px;
-            color: #64748b;
+            margin-bottom: 60px;
             max-width: 700px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .benefit-card {
-            background: #f8fafc;
-            border-radius: 20px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-            background: white;
-        }
-
-        .benefit-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            border-radius: 50%;
-            display: flex;
+        .head-badge {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 28px;
-            color: #0f172a;
-        }
-
-        .benefit-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 10px;
-        }
-
-        .benefit-card p {
+            gap: 10px;
+            background-color: #f1f5f9;
+            color: #0284c7;
+            padding: 8px 20px;
+            border-radius: 40px;
             font-size: 14px;
-            color: #64748b;
-            line-height: 1.6;
-        }
-
-        /* Importance Section */
-        .importance-section {
-            padding: 50px 0;
-            background: #f8fafc;
-        }
-
-        .importance-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .importance-item {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .importance-icon {
-            width: 60px;
-            height: 60px;
-            background: #fef3c7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 24px;
-            color: #fbbf24;
-        }
-
-        .importance-item h4 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 10px;
-        }
-
-        .importance-item p {
-            font-size: 14px;
-            color: #64748b;
-        }
-
-        /* ===== FAQ Section ===== */
-        .faq-wrapper {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, white 100%);
-        }
-
-        .faq-layout {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 50px;
-        }
-
-        .faq-header h3 {
-            font-size: 16px;
-            color: #fbbf24;
             font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .faq-header h2 {
-            font-size: 42px;
-            font-weight: 800;
-            color: #0f172a;
             margin-bottom: 20px;
         }
 
-        .faq-header p {
-            color: #64748b;
-            margin-bottom: 40px;
+        .head-badge i {
+            color: #0284c7;
         }
 
-        .faq-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .faq-item {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-
-        .faq-question {
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            background: white;
-        }
-
-        .question-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .question-icon {
-            width: 35px;
-            height: 35px;
-            background: #fef3c7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fbbf24;
-        }
-
-        .question-content h4 {
-            font-size: 16px;
-            font-weight: 600;
+        .head-title {
+            font-size: 38px;
+            font-weight: 800;
             color: #0f172a;
+            margin-bottom: 15px;
+            line-height: 1.3;
         }
 
-        .arrow-icon {
-            color: #fbbf24;
-            transition: transform 0.3s;
-        }
-
-        .faq-item.open .arrow-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s;
-            background: #f8fafc;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 150px;
-        }
-
-        .faq-answer p {
-            padding: 0 20px 20px 70px;
-            font-size: 14px;
+        .head-desc {
+            font-size: 16px;
             color: #64748b;
+            line-height: 1.7;
         }
 
-        .contact-card {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border-radius: 20px;
-            padding: 30px;
+        /* إحصائيات سريعة */
+        .stats-row {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            justify-content: center;
+            gap: 40px;
             margin-top: 40px;
+            flex-wrap: wrap;
         }
 
-        .contact-card-icon {
-            width: 50px;
-            height: 50px;
-            background: #fbbf24;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: #0f172a;
-        }
-
-        .contact-card-text {
-            flex: 1;
-        }
-
-        .contact-card-text h4 {
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .contact-card-text p {
-            color: #94a3b8;
-            font-size: 13px;
-        }
-
-        .contact-card-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .call-btn {
-            background: #fbbf24;
-            color: #0f172a;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .whatsapp-btn {
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .stats-sidebar {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .stat-block {
+        .stat-item-simple {
             text-align: center;
-            padding: 15px;
-            border-bottom: 1px solid #f1f5f9;
+            padding: 15px 25px;
+            background: #f8fafc;
+            border-radius: 16px;
+            min-width: 140px;
         }
 
-        .stat-block:last-child {
-            border-bottom: none;
-        }
-
-        .stat-value {
+        .stat-number {
             font-size: 32px;
             font-weight: 800;
-            color: #fbbf24;
+            color: #0284c7;
+            line-height: 1.2;
         }
 
         .stat-label {
             font-size: 14px;
+            color: #475569;
+        }
+
+        /* شبكة آراء العملاء */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        /* بطاقة الرأي */
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.6s ease forwards;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: #bae6fd;
+            box-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.05), 0 10px 10px -5px rgba(2, 132, 199, 0.02);
+        }
+
+        /* أيقونة علامة الاقتباس */
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 40px;
+            color: #e2e8f0;
+            opacity: 0.4;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover .quote-icon {
+            color: #0284c7;
+            opacity: 0.2;
+            transform: rotate(5deg);
+        }
+
+        /* معلومات العميل */
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0284c7;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .client-details {
+            flex: 1;
+        }
+
+        .client-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .client-location {
+            font-size: 13px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .client-location i {
+            color: #0284c7;
+            font-size: 12px;
+        }
+
+        /* التقييم */
+        .rating-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 15px;
+        }
+
+        .rating-stars i {
+            color: #fbbf24;
+            font-size: 14px;
+        }
+
+        .rating-stars i.far {
+            color: #cbd5e1;
+        }
+
+        /* نص الرأي */
+        .testimonial-text {
+            font-size: 15px;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+            padding-right: 20px;
+            border-right: 3px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover .testimonial-text {
+            border-right-color: #0284c7;
+            color: #0f172a;
+        }
+
+        /* تاريخ الرأي */
+        .testimonial-date {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .testimonial-date i {
+            color: #0284c7;
+        }
+
+        /* تأخيرات ظهور البطاقات */
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        .testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+        .testimonial-card:nth-child(5) { animation-delay: 0.5s; }
+        .testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* قسم إحصائيات إضافية */
+        .trust-badge {
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .trust-icon {
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0284c7;
+            font-size: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .trust-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trust-text strong {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .trust-text span {
+            font-size: 13px;
             color: #64748b;
         }
 
-        /* Importance Under FAQ */
-        .importance-under-faq {
+        /* قسم دعوة للمشاركة */
+        .invite-section {
             margin-top: 50px;
-            padding: 30px;
-            background: #f8fafc;
-            border-radius: 20px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
         }
 
-        .importance-under-faq h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .importance-flex {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+        .invite-content {
+            display: flex;
+            align-items: center;
             gap: 20px;
         }
 
-        .importance-point {
-            text-align: center;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
+        .invite-icon {
+            width: 70px;
+            height: 70px;
+            background: #0284c7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
         }
 
-        .importance-point i {
-            font-size: 30px;
-            color: #fbbf24;
-            margin-bottom: 10px;
-        }
-
-        .importance-point h4 {
-            font-size: 16px;
+        .invite-text h4 {
+            font-size: 22px;
             font-weight: 700;
             color: #0f172a;
             margin-bottom: 5px;
         }
 
-        .importance-point p {
-            font-size: 13px;
-            color: #64748b;
+        .invite-text p {
+            font-size: 15px;
+            color: #475569;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-image-box {
-                order: -1;
-                height: 300px;
-            }
-            
-            .benefits-grid {
+        .invite-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .invite-wa {
+            background-color: #059669;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .invite-wa:hover {
+            background-color: #047857;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.3);
+        }
+
+        .invite-call {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 15px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .invite-call:hover {
+            background-color: #0284c7;
+            color: white;
+            border-color: #0284c7;
+            transform: translateY(-3px);
+        }
+
+        .invite-call:hover i {
+            color: white;
+        }
+
+        .invite-call i {
+            color: #0284c7;
+            transition: all 0.3s ease;
+        }
+
+        /* عناصر زخرفية */
+        .testi-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .testi-dots span {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #e2e8f0;
+            border-radius: 50%;
+        }
+
+        .testi-dots span:nth-child(1) {
+            top: 10%;
+            right: 5%;
+            width: 8px;
+            height: 8px;
+            background-color: #bae6fd;
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        .testi-dots span:nth-child(2) {
+            bottom: 15%;
+            left: 8%;
+            width: 12px;
+            height: 12px;
+            background-color: #fed7aa;
+            animation: floatSlow 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* ===== Responsive Design ===== */
+        @media screen and (max-width: 992px) {
+            .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .faq-layout {
-                grid-template-columns: 1fr;
+            .head-title {
+                font-size: 32px;
             }
             
-            .importance-flex {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 36px;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .importance-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-card {
+            .invite-section {
                 flex-direction: column;
                 text-align: center;
             }
             
-            .importance-flex {
-                grid-template-columns: 1fr;
+            .invite-content {
+                flex-direction: column;
+                text-align: center;
             }
         }
 
-        /* Scroll Animation */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s;
+        @media screen and (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .stats-row {
+                gap: 20px;
+            }
+            
+            .stat-item-simple {
+                min-width: 120px;
+                padding: 12px 20px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+            
+            .head-title {
+                font-size: 28px;
+            }
+            
+            .trust-badge {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .invite-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .invite-wa, .invite-call {
+                justify-content: center;
+            }
         }
 
-        .fade-up.appear {
-            opacity: 1;
-            transform: translateY(0);
+        @media screen and (max-width: 480px) {
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+            
+            .client-avatar {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .client-name {
+                font-size: 16px;
+            }
+            
+            .testimonial-text {
+                font-size: 14px;
+            }
+            
+            .stats-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-item-simple {
+                width: 100%;
+                max-width: 200px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Top Header -->
-    <div class="top-header">
-        <div class="master-wrapper">
-            <div class="header-flex">
-                <div class="contact-details">
-                    <span><i class="fas fa-phone-alt"></i> 0541178508</span>
-                    <span><i class="fas fa-envelope"></i> info@itqan.com</span>
+    <!-- قسم آراء العملاء -->
+    <section class="testimonials-section">
+        <div class="wrapper-testimonials">
+            <!-- رأس القسم -->
+            <div class="testimonials-head">
+                <div class="head-badge">
+                    <i class="fas fa-star"></i>
+                    <span>آراء عملائنا</span>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navigation-panel">
-        <div class="master-wrapper">
-            <div class="nav-flex">
-                <div class="brand-box">
-                    <div class="brand-icon">ات</div>
-                    <span class="brand-text">اتقان <span>الخليج</span></span>
-                </div>
+                <h2 class="head-title">ماذا قالوا عن خدماتنا</h2>
+                <p class="head-desc">
+                    نفخر بثقة عملائنا الكرام ونسعد دائماً بتقديم أفضل الخدمات لهم. 
+                    هذه بعض آرائهم وتجاربهم مع اتقان الخليج.
+                </p>
                 
-                <ul class="menu-list" id="menuList">
-                    <li><a href="#" class="current">الرئيسية</a></li>
-                    <li><a href="#">خدماتنا</a></li>
-                    <li><a href="#">مشاريعنا</a></li>
-                    <li><a href="#">من نحن</a></li>
-                    <li><a href="#">اتصل بنا</a></li>
-                </ul>
-
-                <button class="action-button">
-                    تواصل معنا
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-
-                <button class="menu-trigger" id="menuTrigger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <!-- إحصائيات سريعة -->
+                <div class="stats-row">
+                    <div class="stat-item-simple">
+                        <div class="stat-number">+1500</div>
+                        <div class="stat-label">عميل سعيد</div>
+                    </div>
+                    <div class="stat-item-simple">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">التقييم العام</div>
+                    </div>
+                    <div class="stat-item-simple">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">رضا العملاء</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
 
-    <!-- Hero Area -->
-    <section class="hero-area">
-        <div class="master-wrapper">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1 class="fade-up">
-                        خدمات تنظيف وصيانة
-                        <br>
-                        <span class="hero-highlight">احترافية للخزانات</span>
-                        <br>
-                        بجودة وضمان
-                    </h1>
-                    <p class="hero-description fade-up">
-                        نقدم أفضل خدمات تنظيف وتعقيم وعزل الخزانات بالرياض 
-                        باستخدام أحدث المعدات والمواد الآمنة مع ضمان الجودة.
+            <!-- شبكة آراء العملاء -->
+            <div class="testimonials-grid">
+                <!-- رأي 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <span>أ</span>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">أحمد العلي</h3>
+                            <div class="client-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>شمال الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "تعاملت مع اتقان الخليج لتنظيف خزان منزلي، وكانت تجربة رائعة. 
+                        فريق محترف وسريع والأسعار مناسبة جداً. الخزان نظف بشكل ممتاز 
+                        والمياه الآن نقية تماماً. أنصح بالتعامل معهم."
                     </p>
-                    <div class="hero-actions fade-up">
-                        <button class="primary-btn">
-                            <i class="fas fa-phone-alt"></i>
-                            اتصل بنا
-                        </button>
-                        <button class="secondary-btn">
-                            <i class="fab fa-whatsapp"></i>
-                            واتساب
-                        </button>
-                    </div>
-
-                    <div class="stats-panel fade-up">
-                        <div class="stats-number">+2500</div>
-                        <div class="stats-label">عميل سعيد</div>
-                        <div class="avatars-group">
-                            <div class="avatar-item">س</div>
-                            <div class="avatar-item">أ</div>
-                            <div class="avatar-item">م</div>
-                            <div class="avatar-item">ر</div>
-                            <div class="avatar-more">+</div>
-                        </div>
+                    <div class="testimonial-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>١٥ يناير ٢٠٢٤</span>
                     </div>
                 </div>
 
-                <div class="hero-image-box">
-                    <div class="hero-image-placeholder">
-                        <i class="fas fa-water"></i>
+                <!-- رأي 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
                     </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <span>ن</span>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">نورة السعد</h3>
+                            <div class="client-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>شرق الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "خدمة ممتازة وتعامل راقي. طلبت تنظيف وتعقيم الخزان، 
+                        وجاء الفريق في الموعد المحدد واستخدموا مواد آمنة. 
+                        سعر مناسب جداً مقارنة بالجودة. شكراً لكم."
+                    </p>
+                    <div class="testimonial-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>٢٠ فبراير ٢٠٢٤</span>
+                    </div>
+                </div>
+
+                <!-- رأي 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <span>م</span>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">محمد القحطاني</h3>
+                            <div class="client-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>غرب الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "تعاملت معهم لعزل الخزان، وكان العمل احترافي. 
+                        شرحوا لي الخطوات والمواد المستخدمة، والنتيجة ممتازة. 
+                        أنصح بالتعامل معهم وبقوة."
+                    </p>
+                    <div class="testimonial-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>٥ مارس ٢٠٢٤</span>
+                    </div>
+                </div>
+
+                <!-- رأي 4 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <span>س</span>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">سارة العتيبي</h3>
+                            <div class="client-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>وسط الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "فريق متعاون ومحترف، نظفوا خزان المدرسة بدقة عالية. 
+                        التزموا بمعايير السلامة والصحة. أسعار مناسبة وجودة ممتازة. 
+                        شكراً لكم وسأتعامل معكم مرة أخرى."
+                    </p>
+                    <div class="testimonial-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>١٢ أبريل ٢٠٢٤</span>
+                    </div>
+                </div>
+
+                <!-- رأي 5 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <span>ف</span>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">فهد الدوسري</h3>
+                            <div class="client-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>جنوب الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "طلبت كشف تسربات وتم اكتشاف المشكلة بسرعة بدون تكسير. 
+                        فريق فني متخصص وأسعار معقولة. شكراً لكم على الخدمة الممتازة 
+                        والمصداقية في التعامل."
+                    </p>
+                    <div class="testimonial-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>١٨ أبريل ٢٠٢٤</span>
+                    </div>
+                </div>
+
+                <!-- رأي 6 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <span>ه</span>
+                        </div>
+                        <div class="client-details">
+                            <h3 class="client-name">هند الزهراني</h3>
+                            <div class="client-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>شمال الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "خدمة سريعة وتعامل ممتاز من فريق اتقان الخليج. 
+                        نظفوا الخزان العلوي والسفلي في وقت قياسي. 
+                        المواد المستخدمة آمنة ورائحتها منعشة. سعيدة بالتعامل معهم."
+                    </p>
+                    <div class="testimonial-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>٢٥ أبريل ٢٠٢٤</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- شارات الثقة -->
+            <div class="trust-badge">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>آراء حقيقية</strong>
+                        <span>من عملاء سابقين</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>تجارب موثقة</strong>
+                        <span>بعد الخدمة</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>توصيات</strong>
+                        <span>من عملاء مميزين</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- دعوة للمشاركة -->
+            <div class="invite-section">
+                <div class="invite-content">
+                    <div class="invite-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="invite-text">
+                        <h4>شاركنا رأيك وتجربتك</h4>
+                        <p>نحن سعداء بخدمتك، ونتمنى أن تشاركنا رأيك وتجربتك معنا</p>
+                    </div>
+                </div>
+                <div class="invite-buttons">
+                    <a href="https://wa.me/966541178508" target="_blank" class="invite-wa">
+                        <i class="fab fa-whatsapp"></i>
+                        شارك عبر واتساب
+                    </a>
+                    <a href="tel:0541178508" class="invite-call">
+                        <i class="fas fa-phone"></i>
+                        اتصل بنا
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="benefits-section" id="why-choose">
-        <div class="master-wrapper">
-            <div class="section-header fade-up">
-                <span class="section-tag">⭐ لماذا نحن</span>
-                <h2 class="section-title">لماذا تختار اتقان الخليج؟</h2>
-                <p class="section-desc">نتميز بالخبرة والجودة والمواد الآمنة لضمان أفضل خدمة</p>
-            </div>
-
-            <div class="benefits-grid">
-                <div class="benefit-card fade-up">
-                    <div class="benefit-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3>فريق متخصص</h3>
-                    <p>نمتلك فريق عمل مدرب بخبرة عالية في مجال تنظيف وصيانة الخزانات</p>
-                </div>
-
-                <div class="benefit-card fade-up">
-                    <div class="benefit-icon"><i class="fas fa-shield-heart"></i></div>
-                    <h3>مواد آمنة</h3>
-                    <p>نستخدم مواد معتمدة وآمنة تماماً على الصحة والبيئة</p>
-                </div>
-
-                <div class="benefit-card fade-up">
-                    <div class="benefit-icon"><i class="fas fa-search"></i></div>
-                    <h3>كشف دقيق</h3>
-                    <p>أحدث أجهزة الكشف عن التسربات دون تكسير</p>
-                </div>
-
-                <div class="benefit-card fade-up">
-                    <div class="benefit-icon"><i class="fas fa-medal"></i></div>
-                    <h3>ضمان الجودة</h3>
-                    <p>ضمان على جميع الخدمات لمدة تصل إلى سنة</p>
-                </div>
-            </div>
-
-            <!-- Importance Section -->
-            <div class="importance-section fade-up">
-                <div class="section-header">
-                    <h3 class="section-title" style="font-size: 32px;">أهمية العناية بالخزانات</h3>
-                </div>
-                <div class="importance-grid">
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-heart"></i></div>
-                        <h4>صحة الأسرة</h4>
-                        <p>المياه النظيفة تحمي أسرتك من الأمراض والمشاكل الصحية</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-clock"></i></div>
-                        <h4>إطالة العمر</h4>
-                        <p>الصيانة الدورية تطيل عمر الخزان وتحافظ على جودته</p>
-                    </div>
-                    <div class="importance-item">
-                        <div class="importance-icon"><i class="fas fa-hand-holding-water"></i></div>
-                        <h4>جودة المياه</h4>
-                        <p>الحفاظ على نقاء المياه وخلوها من الشوائب والرواسب</p>
-                    </div>
-                </div>
-            </div>
+        <!-- عناصر زخرفية -->
+        <div class="testi-dots">
+            <span></span>
+            <span></span>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-wrapper" id="faq">
-        <div class="master-wrapper">
-            <div class="faq-layout">
-                <div class="faq-content">
-                    <div class="faq-header fade-up">
-                        <h3>❓ الأسئلة الشائعة</h3>
-                        <h2>إجابات على أكثر الأسئلة شيوعاً</h2>
-                        <p>نجيب عن كل استفساراتكم حول خدمات تنظيف وصيانة الخزانات</p>
-                    </div>
-
-                    <div class="faq-list">
-                        <!-- FAQ Item 1 -->
-                        <div class="faq-item fade-up">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <div class="question-content">
-                                    <div class="question-icon"><i class="fas fa-question"></i></div>
-                                    <h4>كم مرة يجب تنظيف الخزانات؟</h4>
-                                </div>
-                                <i class="fas fa-chevron-down arrow-icon"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>يوصى بتنظيف الخزانات كل 6 أشهر للحفاظ على جودة المياه ومنع تراكم الرواسب والجراثيم.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 2 -->
-                        <div class="faq-item fade-up">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <div class="question-content">
-                                    <div class="question-icon"><i class="fas fa-question"></i></div>
-                                    <h4>هل المواد المستخدمة آمنة؟</h4>
-                                </div>
-                                <i class="fas fa-chevron-down arrow-icon"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>نعم، نستخدم مواد معتمدة عالمياً وآمنة تماماً على الصحة ولا تترك أي رواسب ضارة.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 3 -->
-                        <div class="faq-item fade-up">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <div class="question-content">
-                                    <div class="question-icon"><i class="fas fa-question"></i></div>
-                                    <h4>كم تستغرق عملية التنظيف؟</h4>
-                                </div>
-                                <i class="fas fa-chevron-down arrow-icon"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>تستغرق العملية من 2-4 ساعات حسب حجم الخزان وحالته.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 4 -->
-                        <div class="faq-item fade-up">
-                            <div class="faq-question" onclick="toggleFaq(this)">
-                                <div class="question-content">
-                                    <div class="question-icon"><i class="fas fa-question"></i></div>
-                                    <h4>هل توفرون ضمان على الخدمات؟</h4>
-                                </div>
-                                <i class="fas fa-chevron-down arrow-icon"></i>
-                            </div>
-                            <div class="faq-answer">
-                                <p>نعم، نقدم ضماناً لمدة سنة على خدمات العزل و6 أشهر على خدمات التنظيف.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Card -->
-                    <div class="contact-card fade-up">
-                        <div class="contact-card-icon"><i class="fas fa-headset"></i></div>
-                        <div class="contact-card-text">
-                            <h4>لم تجد إجابة لسؤالك؟</h4>
-                            <p>تواصل معنا مباشرة وسنرد عليك فوراً</p>
-                        </div>
-                        <div class="contact-card-actions">
-                            <a href="tel:0541178508" class="call-btn"><i class="fas fa-phone"></i> اتصل</a>
-                            <a href="https://wa.me/966541178508" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> واتساب</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-sidebar fade-up">
-                    <div class="stats-sidebar">
-                        <div class="stat-block">
-                            <div class="stat-value">+10</div>
-                            <div class="stat-label">سنوات خبرة</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-value">+5000</div>
-                            <div class="stat-label">عميل</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-value">100%</div>
-                            <div class="stat-label">رضا العملاء</div>
-                        </div>
-                    </div>
-
-                    <!-- Importance Under FAQ -->
-                    <div class="importance-under-faq">
-                        <h3>أهمية التنظيف الدوري</h3>
-                        <div class="importance-flex">
-                            <div class="importance-point">
-                                <i class="fas fa-droplet"></i>
-                                <h4>نقاء المياه</h4>
-                                <p>مياه نقية خالية من الشوائب</p>
-                            </div>
-                            <div class="importance-point">
-                                <i class="fas fa-bacteria"></i>
-                                <h4>قضاء على الجراثيم</h4>
-                                <p>تعقيم كامل للخزان</p>
-                            </div>
-                            <div class="importance-point">
-                                <i class="fas fa-chart-line"></i>
-                                <h4>عمر أطول</h4>
-                                <p>إطالة عمر الخزان</p>
-                            </div>
-                            <div class="importance-point">
-                                <i class="fas fa-leaf"></i>
-                                <h4>بيئة صحية</h4>
-                                <p>حماية البيئة المنزلية</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- JavaScript للتحكم في الأنيميشن -->
     <script>
-        // Menu Toggle
-        const menuTrigger = document.getElementById('menuTrigger');
-        const menuList = document.getElementById('menuList');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer لإعادة تشغيل الأنيميشن عند التمرير
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const cards = entry.target.querySelectorAll('.testimonial-card');
+                        cards.forEach((card, index) => {
+                            card.style.animation = 'none';
+                            card.offsetHeight; // إعادة تعيين
+                            card.style.animation = `slideUp 0.6s ease forwards`;
+                            card.style.animationDelay = `${index * 0.1}s`;
+                        });
+                    }
+                });
+            }, { threshold: 0.2 });
 
-        menuTrigger.addEventListener('click', () => {
-            menuTrigger.classList.toggle('active');
-            menuList.classList.toggle('show');
-        });
+            const section = document.querySelector('.testimonials-section');
+            if (section) {
+                observer.observe(section);
+            }
 
-        // Close menu when clicking links
-        document.querySelectorAll('.menu-list a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuTrigger.classList.remove('active');
-                menuList.classList.remove('show');
+            // تأثيرات hover للبطاقات
+            const cards = document.querySelectorAll('.testimonial-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
             });
-        });
 
-        // FAQ Toggle
-        function toggleFaq(element) {
-            const faqItem = element.closest('.faq-item');
-            faqItem.classList.toggle('open');
-        }
-
-        // Scroll Animation
-        const fadeElements = document.querySelectorAll('.fade-up');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
+            // عداد بسيط للأرقام (تأثير بصري)
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const text = stat.textContent;
+                if (text.includes('+') || text.includes('.')) {
+                    // نتركها كما هي
                 }
             });
-        }, { threshold: 0.1 });
 
-        fadeElements.forEach(el => observer.observe(el));
+            // تأثيرات للأزرار
+            const inviteButtons = document.querySelectorAll('.invite-wa, .invite-call');
+            inviteButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
 
-        // Active link highlighting
-        const menuLinks = document.querySelectorAll('.menu-list a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                menuLinks.forEach(l => l.classList.remove('current'));
-                link.classList.add('current');
+        // تأثير parallax بسيط للعناصر الزخرفية
+        window.addEventListener('scroll', function() {
+            const dots = document.querySelectorAll('.testi-dots span');
+            const scrollY = window.scrollY;
+            
+            dots.forEach((dot, index) => {
+                const speed = 0.1 * (index + 1);
+                dot.style.transform = `translateY(${scrollY * speed}px)`;
             });
         });
     </script>
 
+    <!-- CSS إضافي للأنيميشن -->
+    <style>
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .stat-item-simple {
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item-simple:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.1);
+        }
+        
+        .trust-item {
+            transition: transform 0.3s ease;
+        }
+        
+        .trust-item:hover {
+            transform: translateX(-5px);
+        }
+        
+        .testimonial-text {
+            transition: border-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .quote-icon {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    </style>
 </body>
 </html>
